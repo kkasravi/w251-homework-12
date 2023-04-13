@@ -1,9 +1,16 @@
 # w251-homework-12
 
 
+This was run on an EC2 instance using a g5.2xlarge server
+
+![EC2 server running screenshot](g5.2xlarge.png) 
+
+
 ## Instructions to run
 
-first run jupyterlab then connect to the jupyterlab and open a terminal in that environment (which uses nemo:latest container).
+- run jupyterlab 
+- connect to jupyterlab from browser 
+- open a terminal in that environment (which uses nemo:latest container).
 
 ### Create tokenizer files
 
@@ -15,7 +22,7 @@ first run jupyterlab then connect to the jupyterlab and open a terminal in that 
 > make train
 
 
-## Output
+## Training Output
 
 ### Training  in progress
 
