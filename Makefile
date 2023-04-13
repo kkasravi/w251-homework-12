@@ -1,13 +1,9 @@
 
-venv:
-	python3 -m venv ./venv
-
-install:
-	. venv/bin/activate && pip install -r requirements.txt
+tar:
+	curl https://hw12.s3.us-west-1.amazonaws.com/libri.tar.gz --output libri.tar.gz
 
 tokenizer:
-	. venv/bin/activate && python process_asr_text_tokenizer.py --manifest=../librispeech/train_clean_100.json --data_root=../librispeech/LibriSpeech --tokenizer=spe --spe_type=unigram --vocab_size=1024		
-
+	python process_asr_text_tokenizer.py --manifest=../librispeech/train_clean_100.json --data_root=../librispeech/LibriSpeech --tokenizer=spe --spe_type=unigram --vocab_size=1024		
 
 train:
 	python speech_to_text_rnnt_bpe.py \
